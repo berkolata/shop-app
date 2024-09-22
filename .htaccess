@@ -1,0 +1,11 @@
+# Apache mod_rewrite modülünü etkinleştir
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)$ $1.php [L]
+
+# Dinamik URL'leri yönlendirme (eğer fiziksel dosya/dizin değilse)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ app.php?slug=$1 [L,QSA]
