@@ -20,9 +20,9 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
 // SMTP ayarlarını genel olarak tanımla
-$smtpHost = 'mail.berkant.xyz';
-$smtpUsername = 'test@berkant.xyz';
-$smtpPassword = 's2Dk5An5B';
+$smtpHost = 'mail.yourmail.com';
+$smtpUsername = 'test@yourmail.com';
+$smtpPassword = 'your_password';
 $smtpSecure = 'tls';
 $smtpPort = 587;
 
